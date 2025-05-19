@@ -11,7 +11,7 @@ func GetPackage() *denv.Package {
 	mainpkg := denv.NewPackage("cvulkan")
 
 	// 'cvulkan' library
-	mainlib := denv.SetupDefaultCppLibProject("cvulkan", "github.com\\jurgen-kluft\\cvulkan")
+	mainlib := denv.SetupCppLibProject("cvulkan", "github.com\\jurgen-kluft\\cvulkan")
 
 	mainpkg.AddMainLib(mainlib)
 
