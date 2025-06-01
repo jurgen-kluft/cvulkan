@@ -8,10 +8,10 @@ import (
 func GetPackage() *denv.Package {
 
 	// The main package
-	mainpkg := denv.NewPackage("cvulkan")
+	mainpkg := denv.NewPackage("github.com\\jurgen-kluft", "cvulkan")
 
 	// 'cvulkan' library
-	mainlib := denv.SetupCppLibProject("cvulkan", "github.com\\jurgen-kluft\\cvulkan")
+	mainlib := denv.SetupCppLibProject(mainpkg, "cvulkan")
 
 	mainpkg.AddMainLib(mainlib)
 
