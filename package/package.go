@@ -1,7 +1,7 @@
 package cvulkan
 
 import (
-	"github.com/jurgen-kluft/ccode/denv"
+	"github.com/jurgen-kluft/gide/denv"
 )
 
 // GetPackage returns the package object of 'cvulkan'
@@ -14,14 +14,6 @@ func GetPackage() *denv.Package {
 	mainlib := denv.SetupCppLibProject(mainpkg, "cvulkan")
 
 	mainpkg.AddMainLib(mainlib)
-
-	if denv.OS == "windows" {
-		//mainlib.AddDefine("_GLFW_WIN32;_GLFW_WGL;WIN32")
-	} else if denv.OS == "darwin" {
-		//mainlib.AddDefine("_GLFW_COCOA;MACOSX")
-	} else if denv.OS == "linux" {
-		//mainlib.AddDefine("_GLFW_X11;_GLFW_GFX;LINUX")
-	}
 
 	return mainpkg
 }
